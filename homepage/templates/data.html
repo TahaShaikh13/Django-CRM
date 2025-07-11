@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Customer Data</h1>
+
+<div class="card">
+  <div class="card-header">{{customer_data.first_name}} {{customer_data.last_name}}</div>
+  <div class="card-body">
+    <figure>
+      <blockquote class="blockquote">
+        <p><strong>Email: </strong>{{customer_data.email}}</p>
+        <p><strong>Phone no:  </strong>{{customer_data.phone_no}}</p>
+        <p><strong>Address:  </strong>{{customer_data.address}}</p>
+        <p><strong>City:  </strong>{{customer_data.city}}</p>
+        <p><strong>State:  </strong>{{customer_data.state}}</p>
+        <p><strong>Pin code:  </strong>{{customer_data.pincode}}</p>
+        <p><strong>Created at:  </strong>{{customer_data.time_created}}</p>
+      </blockquote>
+    </figure>
+  </div>
+</div>
+<br>
+<a href="{% url 'homepage' %}" class="btn btn-secondary">Back</a>
+
+<a href="{% url 'delete_data' customer_data.id %}" class="btn btn-danger">Delete</a>
+
+<a href="{% url 'update_data' customer_data.id %}" class="btn  btn-danger">Update</a>
+
+
+<!-- 
+{{customer_data.id}}<br />
+{{customer_data.first_name}} {{customer_data.last_name}}<br />
+{{customer_data.email}}<br />
+{{customer_data.phone_no}}<br />
+{{customer_data.address}}<br />
+{{customer_data.city}}<br />
+{{customer_data.state}}<br />
+{{customer_data.pincode}}<br />
+{{customer_data.time_created}}<br /> -->
+{% endblock content %}
+
