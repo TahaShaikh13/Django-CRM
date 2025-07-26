@@ -10,7 +10,11 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
   </head>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/data.css' %}">
   <body>
     {% include 'navbar.html'%}
 <div class="container">

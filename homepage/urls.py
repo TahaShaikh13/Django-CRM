@@ -11,4 +11,6 @@ urlpatterns = [
     path('delete_data/<int:pk>',views.delete_data, name='delete_data'),
     path('add_data/',views.add_data, name='add_data'),
     path('update_data/<int:pk>',views.update_data, name='update_data'),
+    path('add_attendence/',views.mark_attendence, name='mark_attendence'),
+    path('view_attendence/',views.view_attendence,name='view_attendence'),
 ]

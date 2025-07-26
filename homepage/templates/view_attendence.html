@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    
+<form method="GET" class="mb-4 row g-2">
+    <div class="col-md-5">
+        <input type="text" name="q" placeholder="Search by Name" value="{{query}}" class="form-control">
+    </div>
+    <div class="col-md-4">
+        <input type="date" name="date" value="{{date}}" class="form-control">
+    </div>
+    <div class="col-md-3">
+        <button type="submit" class="btn btn-primary w-100">Filter</button>
+    </div>
+</form>
+
+<table class="table table-hover table-bordered">
+  <thead class="table-dark">
+    <tr>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    {% if view_attendence %}
+        {% for attendence in view_attendence %}
+            <tr>
+                <th scope="row">{{attendence.employee}}</td>
+                <td>{{attendence.date}}</td>
+                <td>{{attendence.status}}</td>
+            </tr>
+        {% endfor %}  
+    {% endif %}
+        
+  </tbody>
+
+{% endblock %}
+    

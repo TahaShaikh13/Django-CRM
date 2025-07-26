@@ -6,15 +6,47 @@
 
 <h1>Welcome...</h1>
 <br>
+
+<form method="GET" action="" class="form-inline mb-3">
+  <input type="text" name="q" class="form-control" placeholder="Search Employee..." value="{{request.GET.q}}">
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<form action="" method="GET">
+  <select name="department">
+    <option value="">Select Department</option>
+    {% for dept in departments %}
+    <option value="{{ dept.id }}" {% if request.GET.department == dept.id|stringformat:"s" %}selected{% endif %}>
+      {{dept.dep_name}}
+    </option>
+    {% endfor %}
+  </select>
+
+  <select name="designation">
+    <option value="">Select Designation</option>
+    {% for des in designations %}
+    <option value="{{des.id}}" {% if request.GET.designation == des.id|stringformat:"s"%}selected{% endif %}>
+      {{des.des_name}}
+    </option>
+    {% endfor %}
+  </select>
+
+  <button type="submit">Filter</button>
+</form>
+
 <h1>Data</h1>
 
-<table class="table table-success table-striped table-hover table-bordered">
+<table class="table table-hover table-bordered">
   <thead class="table-dark">
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Name</th>
+      <th scope="col">Gender</th>
       <th scope="col">Email</th>
+      <th scope="col">Department</th>
+      <th scope="col">Designation</th>
       <th scope="col">Phone_no</th>
+      <th scope="col">Date of Birth</th>
       <th scope="col">Address</th>
       <th scope="col">City</th>
       <th scope="col">State</th>
@@ -29,8 +61,12 @@
      <tr>
       <th scope="row"><a href="{% url 'data' data.id %}">{{data.id}}</a></th>
       <td>{{data.first_name}} {{data.last_name}}</td>
+      <td>{{data.gender}}</td>
       <td>{{data.email}}</td>
+      <td>{{data.department}}</td>
+      <td>{{data.designation}}</td>
       <td>{{data.phone_no}}</td>
+      <td>{{data.date_of_birth}}</td>
       <td>{{data.address}}</td>
       <td>{{data.city}}</td>
       <td>{{data.state}}</td>
@@ -92,4 +128,4 @@
 
 {% endif %}
 
-{% endblock content %}
+{% endblock %}
