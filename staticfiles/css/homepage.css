@@ -1,0 +1,114 @@
+/* Headings */
+body h1 {
+  color: #1a237e !important;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Search input & dropdowns */
+input[type="text"].form-control,
+select {
+  background-color: #f1f3f4 !important;
+  border: 2px solid #1a237e !important;
+  color: #333 !important;
+  padding: 10px 15px !important;
+  border-radius: 6px !important;
+  width: auto;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Buttons */
+.btn,
+button {
+  background-color: #3949ab !important;
+  color: white !important;
+  font-weight: bold;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 8px 16px !important;
+  transition: 0.3s;
+}
+
+.btn:hover,
+button:hover {
+  background-color: #1a237e !important;
+  color: #fff !important;
+}
+
+/* Table */
+.table {
+  font-size: 0.95rem;
+  background-color: #e8eaf6 !important;
+}
+
+.table thead th {
+  background-color: #1a237e !important;
+  color: white !important;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table tbody td,
+.table tbody th {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #ffffff !important;
+}
+
+.table tbody tr:hover {
+  background-color: #c5cae9 !important;
+}
+
+/* Login form */
+form input[type="text"],
+form input[type="password"] {
+  background-color: #f5f5f5 !important;
+  border: 1.5px solid #1a237e !important;
+  border-radius: 6px !important;
+  padding: 10px 12px !important;
+  margin-bottom: 15px;
+  width: 100% !important;
+}
+
+/* Overall layout */
+body {
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+  background: linear-gradient(to right, #1a237e, #3949ab) !important;
+  padding: 12px 20px !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff !important;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  color: #e0e0e0 !important;
+  font-weight: 500;
+  padding: 8px 15px !important;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.navbar-toggler {
+  border-color: #ffffff !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}

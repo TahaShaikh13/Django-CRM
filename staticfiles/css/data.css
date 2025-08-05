@@ -1,0 +1,114 @@
+/* custom.css */
+
+/* Apply a clean and modern card style */
+.card {
+  border: 2px solid #007bff;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  background-color: #fefefe;
+  padding: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+/* Card Header Style */
+.card-header {
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+/* Content inside card */
+.card-body p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Make strong labels stand out */
+.card-body strong {
+  color: #333;
+  width: 120px;
+  display: inline-block;
+}
+
+/* Buttons */
+a.btn {
+  margin-right: 10px;
+  border-radius: 12px !important;
+  font-weight: 500;
+  padding: 8px 18px;
+}
+
+/* Back button */
+a.btn-secondary {
+  background-color: #343a40 !important;
+  border-color: #343a40 !important;
+  color: white !important;
+}
+
+/* Delete button */
+a.btn-danger {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
+
+/* Fix overall spacing */
+body {
+  background-color: #f4f8fb;
+}
+
+/* Attendance form filter */
+form {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Input fields */
+form input.form-control {
+  border-radius: 10px;
+  height: 45px;
+}
+
+/* Filter button */
+form button.btn {
+  height: 45px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* Table Styling */
+.table {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Header row */
+.table thead.table-dark th {
+  background: linear-gradient(to right, #343a40, #6c757d);
+  color: white;
+  font-size: 16px;
+}
+
+/* Table rows */
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Cells */
+.table td, .table th {
+  vertical-align: middle;
+  font-size: 15px;
+  padding: 12px;
+  text-align: center;
+}
