@@ -141,3 +141,4 @@ def view_attendence (request):
     else:
         messages.success(request,"You are not Logged In, You have to be Logged In to view Attendence")
         return redirect ('homepage')
+        
