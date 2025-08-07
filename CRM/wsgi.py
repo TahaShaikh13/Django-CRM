@@ -10,7 +10,12 @@ https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
+from django.core.management import call_command
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'CRM.settings')
 
 application = get_wsgi_application()
+
+if os.environ.get('RUN_MAIN') != 'true':
+    call_command('migrate')
+    call_command('collectstatic',interactive=False, verbosity=0)
