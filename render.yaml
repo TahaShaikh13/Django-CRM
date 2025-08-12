@@ -24,4 +24,4 @@ services:
       - key: SECRET_KEY
         value: django-insecure-lt$%w&s45z&#3f1)64(tbjqs92xu3@z!l)2w4l%r543^d5694u
       - key: DJANGO_SUPERUSER_PASSWORD
-        value: 20082006
+        value: taha20082006
