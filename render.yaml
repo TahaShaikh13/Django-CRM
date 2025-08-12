@@ -6,7 +6,7 @@ services:
     buildCommand: |
       pip install -r requirements.txt
       python manage.py migrate
-      python manage.py createsuperuser --noinput --username=tahashaikh13 --email=tahashaikh20082006@gmail.com
+      python manage.py shell < create_superuser.py
     startCommand: gunicorn CRM.wsgi:application
     envVars:
       - key: DB_NAME
