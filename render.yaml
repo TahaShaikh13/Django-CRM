@@ -3,7 +3,10 @@ services:
     name: crm-django-app
     env: python
     plan: free
-    buildCommand: pip install -r requirements.txt
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py migrate
+      python manage.py createsuperuser --noinput --username=tahashaikh13 --email=tahashaikh20082006@gmail.com
     startCommand: gunicorn CRM.wsgi:application
     envVars:
       - key: DB_NAME
@@ -13,10 +16,12 @@ services:
       - key: DB_PASSWORD
         value: 20082006
       - key: DB_HOST
-        value: localhost   # or your external MySQL host if not local
+        value: bfjzqmqq4oxpwjjejwfj-mysql.services.clever-cloud.com   # or your external MySQL host if not local
       - key: DB_PORT
         value: 3306
       - key: DEBUG
         value: False
       - key: SECRET_KEY
         value: django-insecure-lt$%w&s45z&#3f1)64(tbjqs92xu3@z!l)2w4l%r543^d5694u
+      - key: DJANGO_SUPERUSER_PASSWORD
+        value: 20082006
